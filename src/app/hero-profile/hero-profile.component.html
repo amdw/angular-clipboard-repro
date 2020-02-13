@@ -3,4 +3,5 @@
     <textarea matInput [(ngModel)]="lifetimeAchievements"></textarea>
 </mat-form-field>
 <br>
-<button mat-button (click)="copyAchievements()" color="primary">Copy</button>
+<button mat-button (click)="copyAchievementsBrokenOnFirefox()" color="primary">Copy (broken on Firefox)</button>
+<button mat-button (click)="copyAchievementsWorksOnFirefox()" color="primary">Copy (works on Firefox)</button>

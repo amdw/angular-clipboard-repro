@@ -15,7 +15,7 @@ export class HeroProfile implements OnInit {
     this.lifetimeAchievements = 'Some text to copy';
   }
 
-  copyAchievements() {
+  copyAchievementsBrokenOnFirefox() {
     const pending = this.clipboard.beginCopy(this.lifetimeAchievements);
     let remainingAttempts = 3;
     const attempt = () => {
@@ -28,5 +28,17 @@ export class HeroProfile implements OnInit {
       }
     };
     setTimeout(attempt);
+  }
+
+  copyAchievementsWorksOnFirefox() {
+    const pending = this.clipboard.beginCopy(this.lifetimeAchievements);
+    for (let i = 0; i < 3; i++) {
+      let result = pending.copy();
+      if (result) {
+        console.log('Copied on attempt ' + (i+1));
+        break;
+      }
+    }
+    pending.destroy();
   }
 }
