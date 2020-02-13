@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeroProfile } from './hero-profile/hero-profile.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeroProfile
   ],
   imports: [
     BrowserModule,
