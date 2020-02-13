@@ -1,1 +1,6 @@
-<p>hero-profile works!</p>
+<mat-form-field appearance="fill">
+    <mat-label>Text to copy</mat-label>
+    <textarea matInput [(ngModel)]="lifetimeAchievements"></textarea>
+</mat-form-field>
+<br>
+<button mat-button (click)="copyAchievements()" color="primary">Copy</button>
